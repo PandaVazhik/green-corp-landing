@@ -47,6 +47,7 @@ button {
     top: 0;
     right: 0;
     height: 100%;
+    width: 100%;
 }
 
 .about__image {
@@ -91,6 +92,177 @@ button {
 .about__info {
     max-width: 550px;
 }
+
+.features {
+    background-color: #fff;
+    padding: 115px 60px;
+
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+
+
+}
+
+.card {
+    padding: 35px 40px 25px;
+    border: #D9E4E6 1px solid;
+    border-radius: 5px;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 22px;
+    opacity: 0.8;
+}
+
+.card__logo {
+    height: 100px;
+    width: 100px;
+    font-size: 32px;
+    font-weight: 600;
+    background-color: #eaeff9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-solar-panel {
+    color: #ffb406;
+}
+
+.text__icon {
+    color: #ad1714;
+}
+
+.fa-chart-line {
+    color: #22a030;
+}
+
+.features__border {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: #E6EAF4 1px solid;
+}
+
+.features__feedback {
+    display: flex;
+}
+
+.features__feedback-left {
+    margin-right: 10px;
+}
+
+.features__feedback-left h2 {
+    font-size: 48px;
+}
+
+.features__feedback-left p {
+    font-size: 18px;
+    line-height: 26px;
+    opacity: 0.7;
+}
+
+.features__feedback-right {
+    display: flex;
+    align-items: center;
+}
+
+.features__box {
+    padding: 30px 40px 25px 40px;
+    color: #fff;
+    border-radius: 25px;
+}
+
+.features__box h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 48px;
+}
+
+.features__savings-box {
+    background-color: #dc5e26;
+    margin-right: 30px;
+    box-shadow: 0 6px 0 rgb(221 95 38 / 20%);
+}
+
+.features__rate-box {
+    background-color: #1D263A;
+    box-shadow: 0 6px 0 rgb(29 38 58 / 20%);
+}
+
+.stars {
+    color: #ff7039;
+}
+
+.promo {
+    display: flex;
+}
+
+.promo__image {
+    background-image: url('/img/promo.jpeg');
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    flex-shrink: 0;
+}
+
+.promo__right {
+    background-color: #dd5f26;
+    padding: 160px 60px;
+}
+
+.promo__text {
+    background-color: #fff;
+    padding: 30px 40px;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 500;
+    border-radius: 25px;
+
+}
+
+.promo__text p {
+    opacity: 0.8;
+}
+
+.promo__text p::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ec6b29;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.promo_button {
+    display: flex;
+    justify-content: center;
+}
+
+.promo_button button {
+    background-color: #107b1c;
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 15px 30px;
+    font-weight: 600;
+    box-shadow: 0 16px 36px rgb(16 122 28 / 30%);
+}
+
+.promo_button button i {
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.promo__button-wrap {
+    display: flex;
+    justify-content: center;
+  }
 
 .form {
     display: flex;
@@ -247,51 +419,98 @@ footer {
 }
 
 @media (max-width: 720px) {
-    @media (max-width: 720px) {
-        header {
-            padding: 10px;
-        }
-
-        .header__logo {
-            height: 20px;
-        }
-
-        header a {
-            margin-right: 10px;
-        }
-
-        .about {
-            flex-direction: column-reverse;
-            padding: 50px 10px;
-        }
-
-        .about h1 {
-            font-size: 36px;
-            line-height: 40px;
-        }
-
-        .about__image {
-            width: 280px;
-        }
-
-        .about__sun-image {
-            width: 75px;
-            height: 75px;
-        }
-
-        .form {
-            padding: 50px 10px;
-        }
-
-        .form h1 {
-            font-size: 36px;
-        }
-
-        footer {
-            padding: 50px 10px;
-        }
-
-        .footer__container {
-            flex-direction: column;
-        }
+    header {
+        padding: 10px;
     }
+
+    .header__logo {
+        height: 20px;
+    }
+
+    header a {
+        margin-right: 10px;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+        padding: 50px 10px;
+    }
+
+    .about h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .about__image {
+        width: 280px;
+    }
+
+    .about__sun-image {
+        width: 75px;
+        height: 75px;
+    }
+
+    .features {
+        padding: 50, 10;
+    }
+
+    .cards {
+        grid-template-columns: auto;
+    }
+
+    .features__feedback {
+        flex-direction: column;
+    }
+
+    .features__feedback-left h2 {
+        font-size: 36px;
+    }
+
+    .features__feedback-right {
+        flex-direction: column;
+        align-items: stretch;
+
+    }
+
+    .features__feedback-left {
+        margin-right: 0;
+    }
+
+    .features__box h3 {
+        text-align: 36px;
+    }
+
+    .features__savings-box {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .promo {
+        flex-direction: column-reverse;
+    }
+
+    .promo__image {
+        width: 100%;
+        height: 500px;
+    }
+
+    .promo__right {
+        padding: 50px 10px;
+    }
+
+    .form {
+        padding: 50px 10px;
+    }
+
+    .form h1 {
+        font-size: 36px;
+    }
+
+    footer {
+        padding: 50px 10px;
+    }
+
+    .footer__container {
+        flex-direction: column;
+    }
+}
